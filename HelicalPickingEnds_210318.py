@@ -440,8 +440,8 @@ class MetaData():
 
 
 
-star_file = '/home/xuch0013/20210521_sp100/full_data/relion/CtfFind/job003/micrographs_ctf.star'
-output_folder = '/home/xuch0013/20210521_sp100/full_data/relion/ManualPick/job006/movies'
+star_file = '/your/star/file/micrographs_ctf.star'
+output_folder = '/your/output/folder'
 pixel_size = 1.1
 minimal_length = (14*50) / pixel_size
 
@@ -460,21 +460,3 @@ for i in tqdm(range(len(star._data))):
         continue
 
 
-
-#dir_path = '/media/ntu/disk4/20210112_FilamentAutopickingSample/UMOD/5Images'
-#starpath = 'path'
-
-
-"""file_list_raw = os.listdir(dir_path)
-file_list = []
-for file in file_list_raw:
-    if file[-4:] == '.mrc':
-        file_list.append(file)
-
-for file in tqdm(file_list):
-    fullpath = dir_path+'/'+file
-    pick = FilamentPicker(fullpath,pixel_size)
-    pick.minimal_length = minimal_length
-    pick.picking()
-    writer = RelionStarCoordinate(pick.filament,pick.image_path,pixel_size)
-    writer.StarGenerator()"""
